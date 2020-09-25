@@ -1,6 +1,7 @@
+#! /usr/bin/env python
 import boto3
 
-client = boto3.client('dynamodb', region_name='us-east-1')
+client = boto3.client('dynamodb', region_name='us-west-2')
 
 try:
     resp = client.delete_table(
