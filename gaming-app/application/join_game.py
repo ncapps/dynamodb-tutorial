@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 import boto3
 
 from entities import Game, UserGameMapping

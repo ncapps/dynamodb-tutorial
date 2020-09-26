@@ -61,8 +61,17 @@ Achieving best results with a NoSQL database such as DynamoDB requires a shift i
 - If your data model has multiple entities with relationships among them, you generally use a composite primary key with both HASH and RANGE values. 
 - The composite primary key gives us the Query ability on the HASH key to satisfy one of the query patterns we need. In the DynamoDB documentation, the partition key is called HASH and the sort key is called RANGE,
 
-Because we’re storing different entities in a single table, we can’t use primary key attribute names such as UserId. The attribute means something different based on the type of entity being stored. For example, the primary key for a user might be its USERNAME, and the primary key for a game might be its GAMEID. Accordingly, we use generic names for the attributes, such as PK (for partition key) and SK (for sort key).
+- Because we’re storing different entities in a single table, we can’t use primary key attribute names such as UserId. The attribute means something different based on the type of entity being stored. For example, the primary key for a user might be its USERNAME, and the primary key for a game might be its GAMEID. Accordingly, we use generic names for the attributes, such as PK (for partition key) and SK (for sort key).
 
- You should optimize DynamoDB tables for the number of requests it receives. We also mentioned that DynamoDB does not have joins that a relational database has. Instead, you design your table to allow for join-like behavior in your requests.
+- You should optimize DynamoDB tables for the number of requests it receives. We also mentioned that DynamoDB does not have joins that a relational database has. Instead, you design your table to allow for join-like behavior in your requests.
 
- In a relational database, you use joins to retrieve multiple entity types from different tables in a single request. With DynamoDB, you specifically model your data, so that entities you should access together are located next to each other in a single table. This approach replaces the need for joins in a typical relational database and keeps your application high-performing as you scale up.
+ - In a relational database, you use joins to retrieve multiple entity types from different tables in a single request. With DynamoDB, you specifically model your data, so that entities you should access together are located next to each other in a single table. This approach replaces the need for joins in a typical relational database and keeps your application high-performing as you scale up.
+
+ ### Query the sparse secondary index
+ To use a secondary index, you have two API calls available: Query and Scan. With Query, you must specify the HASH key, and it returns a targeted result. With Scan, you don’t specify a HASH key, and the operation runs across your entire table. Scans are discouraged in DynamoDB except in specific circumstances because they access every item in your database. If you have a significant amount of data in your table, scanning can take a very long time
+
+ ### DynamoDB transactions
+ DynamoDB transactions make it easier to build applications that alter multiple items as part of a single operation. With transactions, you can operate on up to 10 items as part of a single transaction request.
+
+ ### Inverted index pattern
+ In DynamoDB, an inverted index is a secondary index that is the inverse of your primary key. The RANGE key becomes your HASH key and vice versa. This pattern flips your table and allows you to query on the other side of your many-to-many relationships.
