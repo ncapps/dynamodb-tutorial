@@ -1,0 +1,62 @@
+{"name": "20th Century", "base": "Gin", "mix_method": "Shaken", "glassware": "Coupe", "directions": "Shake all the ingredients with ice, then double strain into a coupe. No garnish.", "PK": "RECIPE#53a098c4-b85a-4c50-8f78-39e4ee86338f", "SK": "#METADATA#53a098c4-b85a-4c50-8f78-39e4ee86338f"}
+{"PK": "RECIPE#53a098c4-b85a-4c50-8f78-39e4ee86338f", "SK": "INGREDIENT#e819427f-88fc-494e-a3fe-78c0d2d86678", "amount": "1.5", "unit": "ounce"}
+{"PK": "RECIPE#53a098c4-b85a-4c50-8f78-39e4ee86338f", "SK": "INGREDIENT#46d440fa-c1b2-4e6b-8ef6-4779f103d65a", "amount": "0.75", "unit": "ounce"}
+{"PK": "RECIPE#53a098c4-b85a-4c50-8f78-39e4ee86338f", "SK": "INGREDIENT#123952d0-5fb9-45e4-a31e-4409bdb8647e", "amount": "0.75", "unit": "ounce"}
+{"PK": "RECIPE#53a098c4-b85a-4c50-8f78-39e4ee86338f", "SK": "INGREDIENT#d7982fb8-ddce-40ab-861d-c700eb85d7c2", "amount": "0.75", "unit": "ounce"}
+{"name": "Airmail", "base": "Rum", "mix_method": "Shaken", "glassware": "Flute", "directions": "Shake all the ingredients (except the champagne) with ice, then strain into a flute. Top with champagne. No garnish.", "PK": "RECIPE#bc0c67d7-e6d7-4fff-9eda-037611579fb2", "SK": "#METADATA#bc0c67d7-e6d7-4fff-9eda-037611579fb2"}
+{"PK": "RECIPE#bc0c67d7-e6d7-4fff-9eda-037611579fb2", "SK": "INGREDIENT#0e706cad-29e5-4a81-b98c-4a714e1b5441", "amount": "1", "unit": "ounce"}
+{"PK": "RECIPE#bc0c67d7-e6d7-4fff-9eda-037611579fb2", "SK": "INGREDIENT#fc238c11-0b3b-417d-8dc4-f8e94f0e435f", "amount": "0.50", "unit": "ounce"}
+{"PK": "RECIPE#bc0c67d7-e6d7-4fff-9eda-037611579fb2", "SK": "INGREDIENT#fd046ef0-669d-4b33-9607-894779e7570c", "amount": "0.5", "unit": "ounce"}
+{"PK": "RECIPE#bc0c67d7-e6d7-4fff-9eda-037611579fb2", "SK": "INGREDIENT#b66cbc6f-3012-4c61-835a-e66b10b1a417", "amount": 0, "unit": null}
+{"name": "Aviation", "base": "Gin", "mix_method": "Shaken", "glassware": "Coupe", "directions": "Shake all the ingredients with ice, then strain into a coupe. Garnish with the cherry.", "PK": "RECIPE#9c0c8037-77f5-4b84-8f70-dae329cb077f", "SK": "#METADATA#9c0c8037-77f5-4b84-8f70-dae329cb077f"}
+{"PK": "RECIPE#9c0c8037-77f5-4b84-8f70-dae329cb077f", "SK": "INGREDIENT#17c40110-aea9-43ea-a7cb-99e3ecce153f", "amount": "2", "unit": "ounce"}
+{"PK": "RECIPE#9c0c8037-77f5-4b84-8f70-dae329cb077f", "SK": "INGREDIENT#8e53def8-c7d4-439c-8b9e-6a561e1bcbde", "amount": "0.50", "unit": "ounce"}
+{"PK": "RECIPE#9c0c8037-77f5-4b84-8f70-dae329cb077f", "SK": "INGREDIENT#2063eff0-504c-4ff9-a36d-0a9c52fff6e1", "amount": "0.5", "unit": "teaspoon"}
+{"PK": "RECIPE#9c0c8037-77f5-4b84-8f70-dae329cb077f", "SK": "INGREDIENT#d7982fb8-ddce-40ab-861d-c700eb85d7c2", "amount": "0.75", "unit": "ounce"}
+{"PK": "RECIPE#9c0c8037-77f5-4b84-8f70-dae329cb077f", "SK": "INGREDIENT#468db90d-a7ef-444c-9b5c-c0ccc7a8b26d", "amount": "0.25", "unit": "ounce"}
+{"PK": "RECIPE#9c0c8037-77f5-4b84-8f70-dae329cb077f", "SK": "INGREDIENT#df7d5eb2-f401-44ec-a27a-8be817c389f3", "amount": 0, "unit": null}
+{"name": "Bamboo", "base": "Modifiers", "mix_method": "Stirred", "glassware": "Rocks glass", "directions": "Stir all the ingredients over ice, then strain into a rocks glass. Garnish with the lemon twist.", "PK": "RECIPE#c58e4494-2d27-43d1-ad19-46489eff1796", "SK": "#METADATA#c58e4494-2d27-43d1-ad19-46489eff1796"}
+{"PK": "RECIPE#c58e4494-2d27-43d1-ad19-46489eff1796", "SK": "INGREDIENT#2d3a6197-8e05-416e-85de-a39fd8618658", "amount": "1.5", "unit": "ounce"}
+{"PK": "RECIPE#c58e4494-2d27-43d1-ad19-46489eff1796", "SK": "INGREDIENT#898fb04e-c73e-4159-b01e-49e801ef1ef7", "amount": "1.5", "unit": "ounce"}
+{"PK": "RECIPE#c58e4494-2d27-43d1-ad19-46489eff1796", "SK": "INGREDIENT#cdf8e98c-f464-40ea-af4c-eec4ad7356a9", "amount": "0.5", "unit": "teaspoon"}
+{"PK": "RECIPE#c58e4494-2d27-43d1-ad19-46489eff1796", "SK": "INGREDIENT#ccc03535-097f-4449-9752-b3a063e3cc94", "amount": "1", "unit": "dash"}
+{"PK": "RECIPE#c58e4494-2d27-43d1-ad19-46489eff1796", "SK": "INGREDIENT#ffad43c4-d5a3-49cf-b082-cb82d758e31d", "amount": "1", "unit": "dash"}
+{"PK": "RECIPE#c58e4494-2d27-43d1-ad19-46489eff1796", "SK": "INGREDIENT#cf70a90d-4fc0-432c-ad9f-2e790ad9d7aa", "amount": 0, "unit": null}
+{"name": "Bee's Knees", "base": "Gin", "mix_method": "Shaken", "glassware": "Coupe", "directions": "Shake all the ingredients with ice, then strain into a coupe. Garnish with the cherry.", "PK": "RECIPE#bcefef5d-6d0e-4941-bdb7-bef7ee81bc8c", "SK": "#METADATA#bcefef5d-6d0e-4941-bdb7-bef7ee81bc8c"}
+{"PK": "RECIPE#bcefef5d-6d0e-4941-bdb7-bef7ee81bc8c", "SK": "INGREDIENT#8e642114-fdf6-47cd-a59f-282197375f7c", "amount": "2", "unit": "ounce"}
+{"PK": "RECIPE#bcefef5d-6d0e-4941-bdb7-bef7ee81bc8c", "SK": "INGREDIENT#d7982fb8-ddce-40ab-861d-c700eb85d7c2", "amount": "0.75", "unit": "ounce"}
+{"PK": "RECIPE#bcefef5d-6d0e-4941-bdb7-bef7ee81bc8c", "SK": "INGREDIENT#fd046ef0-669d-4b33-9607-894779e7570c", "amount": "0.75", "unit": "ounce"}
+{"PK": "RECIPE#bcefef5d-6d0e-4941-bdb7-bef7ee81bc8c", "SK": "INGREDIENT#f29ce0c3-042d-4cda-ab1e-679b11995895", "amount": "3", "unit": "drops"}
+{"PK": "RECIPE#bcefef5d-6d0e-4941-bdb7-bef7ee81bc8c", "SK": "INGREDIENT#df7d5eb2-f401-44ec-a27a-8be817c389f3", "amount": 0, "unit": null}
+{"name": "Blood and Sand", "base": "Scotch", "mix_method": "Shaken", "glassware": "Coupe", "directions": "Shake all the ingredients with ice, then strain into a coupe. Garnish with the cherry.", "PK": "RECIPE#a9b571f1-6e54-4877-a328-bdad77e50842", "SK": "#METADATA#a9b571f1-6e54-4877-a328-bdad77e50842"}
+{"PK": "RECIPE#a9b571f1-6e54-4877-a328-bdad77e50842", "SK": "INGREDIENT#ba5e1113-5d49-42ba-b790-a3454c52e386", "amount": "1", "unit": "ounce"}
+{"PK": "RECIPE#a9b571f1-6e54-4877-a328-bdad77e50842", "SK": "INGREDIENT#cfa10e36-35fd-4ed7-9ad1-5884d02d9a23", "amount": "0.5", "unit": "ounce"}
+{"PK": "RECIPE#a9b571f1-6e54-4877-a328-bdad77e50842", "SK": "INGREDIENT#c945067b-44e5-49a0-a738-b2929b26d30d", "amount": "0.5", "unit": "ounce"}
+{"PK": "RECIPE#a9b571f1-6e54-4877-a328-bdad77e50842", "SK": "INGREDIENT#66b55152-29c4-45e9-8e1b-48b1ddb4c072", "amount": "0.75", "unit": "ounce"}
+{"PK": "RECIPE#a9b571f1-6e54-4877-a328-bdad77e50842", "SK": "INGREDIENT#d7982fb8-ddce-40ab-861d-c700eb85d7c2", "amount": "0.5", "unit": "teaspoon"}
+{"PK": "RECIPE#a9b571f1-6e54-4877-a328-bdad77e50842", "SK": "INGREDIENT#df7d5eb2-f401-44ec-a27a-8be817c389f3", "amount": 0, "unit": null}
+{"name": "Beefeater London Dry Gin", "type": "Base spirit", "category": "Gin", "style": "London dry", "PK": "INGREDIENT#e819427f-88fc-494e-a3fe-78c0d2d86678", "SK": "#METADATA#e819427f-88fc-494e-a3fe-78c0d2d86678"}
+{"name": "Marie Brizard White Creme De Cacao", "type": "Modifier", "category": "Liqueur", "PK": "INGREDIENT#46d440fa-c1b2-4e6b-8ef6-4779f103d65a", "SK": "#METADATA#46d440fa-c1b2-4e6b-8ef6-4779f103d65a"}
+{"name": "Cocchi Americano", "type": "Modifier", "category": "", "PK": "INGREDIENT#123952d0-5fb9-45e4-a31e-4409bdb8647e", "SK": "#METADATA#123952d0-5fb9-45e4-a31e-4409bdb8647e"}
+{"name": "Lemon juice", "type": "Fresh juice", "category": "", "PK": "INGREDIENT#d7982fb8-ddce-40ab-861d-c700eb85d7c2", "SK": "#METADATA#d7982fb8-ddce-40ab-861d-c700eb85d7c2"}
+{"name": "Ron Del Barrilito 3-Star Rum", "type": "Base spirit", "category": "Rum", "PK": "INGREDIENT#0e706cad-29e5-4a81-b98c-4a714e1b5441", "SK": "#METADATA#0e706cad-29e5-4a81-b98c-4a714e1b5441"}
+{"name": "Lime juice", "type": "Fresh juice", "PK": "INGREDIENT#fc238c11-0b3b-417d-8dc4-f8e94f0e435f", "SK": "#METADATA#fc238c11-0b3b-417d-8dc4-f8e94f0e435f"}
+{"name": "Acacia Honey Syrup", "type": "Sweetener", "PK": "INGREDIENT#fd046ef0-669d-4b33-9607-894779e7570c", "SK": "#METADATA#fd046ef0-669d-4b33-9607-894779e7570c"}
+{"name": "Dry Champagne", "type": "Topper", "PK": "INGREDIENT#b66cbc6f-3012-4c61-835a-e66b10b1a417", "SK": "#METADATA#b66cbc6f-3012-4c61-835a-e66b10b1a417"}
+{"name": "Plymouth Gin", "type": "Base spirit", "category": "Gin", "PK": "INGREDIENT#17c40110-aea9-43ea-a7cb-99e3ecce153f", "SK": "#METADATA#17c40110-aea9-43ea-a7cb-99e3ecce153f"}
+{"name": "Luxardo Maraschino Liqueur", "type": "Modifier", "category": "Liqueur", "PK": "INGREDIENT#8e53def8-c7d4-439c-8b9e-6a561e1bcbde", "SK": "#METADATA#8e53def8-c7d4-439c-8b9e-6a561e1bcbde"}
+{"name": "Cr\u00e8me Yvette", "type": "Modifier", "category": "Liqueur", "PK": "INGREDIENT#2063eff0-504c-4ff9-a36d-0a9c52fff6e1", "SK": "#METADATA#2063eff0-504c-4ff9-a36d-0a9c52fff6e1"}
+{"name": "Simple Syrup", "type": "Sweetener", "PK": "INGREDIENT#468db90d-a7ef-444c-9b5c-c0ccc7a8b26d", "SK": "#METADATA#468db90d-a7ef-444c-9b5c-c0ccc7a8b26d"}
+{"name": "Brandied Cherry", "type": "Garnish", "PK": "INGREDIENT#df7d5eb2-f401-44ec-a27a-8be817c389f3", "SK": "#METADATA#df7d5eb2-f401-44ec-a27a-8be817c389f3"}
+{"name": "Dolin Blanc Vermouth", "type": "Modifier", "category": "Vermouth", "PK": "INGREDIENT#2d3a6197-8e05-416e-85de-a39fd8618658", "SK": "#METADATA#2d3a6197-8e05-416e-85de-a39fd8618658"}
+{"name": "Barbadillo Principe Amontillado Sherry", "type": "Modifier", "category": "Sherry", "PK": "INGREDIENT#898fb04e-c73e-4159-b01e-49e801ef1ef7", "SK": "#METADATA#898fb04e-c73e-4159-b01e-49e801ef1ef7"}
+{"name": "Cane Sugar Syrup", "type": "Sweetener", "PK": "INGREDIENT#cdf8e98c-f464-40ea-af4c-eec4ad7356a9", "SK": "#METADATA#cdf8e98c-f464-40ea-af4c-eec4ad7356a9"}
+{"name": "House Orange Bitters", "type": "Bitters", "PK": "INGREDIENT#ccc03535-097f-4449-9752-b3a063e3cc94", "SK": "#METADATA#ccc03535-097f-4449-9752-b3a063e3cc94"}
+{"name": "Angostura Bitters", "type": "Bitters", "PK": "INGREDIENT#ffad43c4-d5a3-49cf-b082-cb82d758e31d", "SK": "#METADATA#ffad43c4-d5a3-49cf-b082-cb82d758e31d"}
+{"name": "Lemon Twist", "type": "Garnish", "PK": "INGREDIENT#cf70a90d-4fc0-432c-ad9f-2e790ad9d7aa", "SK": "#METADATA#cf70a90d-4fc0-432c-ad9f-2e790ad9d7aa"}
+{"name": "Tanqueray London Dry Gin", "type": "Base spirit", "category": "Gin", "style": "London dry", "PK": "INGREDIENT#8e642114-fdf6-47cd-a59f-282197375f7c", "SK": "#METADATA#8e642114-fdf6-47cd-a59f-282197375f7c"}
+{"name": "Scrappy's Lavender Bitters", "type": "Bitters", "PK": "INGREDIENT#f29ce0c3-042d-4cda-ab1e-679b11995895", "SK": "#METADATA#f29ce0c3-042d-4cda-ab1e-679b11995895"}
+{"name": "Springbank 10-Year Scotch", "type": "Base spirit", "category": "Whiskey", "PK": "INGREDIENT#ba5e1113-5d49-42ba-b790-a3454c52e386", "SK": "#METADATA#ba5e1113-5d49-42ba-b790-a3454c52e386"}
+{"name": "Cherry Heering", "type": "Modifier", "category": "Liqueur", "PK": "INGREDIENT#cfa10e36-35fd-4ed7-9ad1-5884d02d9a23", "SK": "#METADATA#cfa10e36-35fd-4ed7-9ad1-5884d02d9a23"}
+{"name": "House Sweet Vermouth", "type": "Modifier", "category": "Vermouth", "PK": "INGREDIENT#c945067b-44e5-49a0-a738-b2929b26d30d", "SK": "#METADATA#c945067b-44e5-49a0-a738-b2929b26d30d"}
+{"name": "Orange juice", "type": "Fresh juice", "PK": "INGREDIENT#66b55152-29c4-45e9-8e1b-48b1ddb4c072", "SK": "#METADATA#66b55152-29c4-45e9-8e1b-48b1ddb4c072"}

@@ -1,0 +1,250 @@
+[
+    {
+        "name": "20th Century",
+        "base": "Gin",
+        "mix_method": "Shaken",
+        "glassware": "Coupe",
+        "ingredients": [
+            {
+                "name": "Beefeater London Dry Gin",
+                "type": "Base spirit",
+                "category": "Gin",
+                "style": "London dry",
+                "amount": "1.5",
+                "unit": "ounce"
+            },
+            {
+                "name": "Marie Brizard White Creme De Cacao",
+                "type": "Modifier",
+                "category": "Liqueur",
+                "amount": "0.75",
+                "unit": "ounce"
+            },
+            {
+                "name": "Cocchi Americano",
+                "type": "Modifier",
+                "category": "",
+                "amount": "0.75",
+                "unit": "ounce"
+            },
+            {
+                "name": "Lemon juice",
+                "type": "Fresh juice",
+                "category": "",
+                "amount": "0.75",
+                "unit": "ounce"
+            }
+        ],
+        "directions": "Shake all the ingredients with ice, then double strain into a coupe. No garnish."
+    },
+    {
+        "name": "Airmail",
+        "base": "Rum",
+        "mix_method": "Shaken",
+        "glassware": "Flute",
+        "ingredients": [
+            {
+                "name": "Ron Del Barrilito 3-Star Rum",
+                "type": "Base spirit",
+                "category": "Rum",
+                "amount": "1",
+                "unit": "ounce"
+            },
+            {
+                "name": "Lime juice",
+                "type": "Fresh juice",
+                "amount": "0.50",
+                "unit": "ounce"
+            },
+            {
+                "name": "Acacia Honey Syrup",
+                "type": "Sweetener",
+                "amount": "0.5",
+                "unit": "ounce"
+            },
+            {
+                "name": "Dry Champagne",
+                "type": "Topper"
+            }
+        ],
+        "directions": "Shake all the ingredients (except the champagne) with ice, then strain into a flute. Top with champagne. No garnish."
+    },
+    {
+        "name": "Aviation",
+        "base": "Gin",
+        "mix_method": "Shaken",
+        "glassware": "Coupe",
+        "ingredients": [
+            {
+                "name": "Plymouth Gin",
+                "type": "Base spirit",
+                "category": "Gin",
+                "amount": "2",
+                "unit": "ounce"
+            },
+            {
+                "name": "Luxardo Maraschino Liqueur",
+                "type": "Modifier",
+                "category": "Liqueur",
+                "amount": "0.50",
+                "unit": "ounce"
+            },
+            {
+                "name": "Crème Yvette",
+                "type": "Modifier",
+                "category": "Liqueur",
+                "amount": "0.5",
+                "unit": "teaspoon"
+            },
+            {
+                "name": "Lemon juice",
+                "type": "Fresh juice",
+                "category": "",
+                "amount": "0.75",
+                "unit": "ounce"
+            },
+            {
+                "name": "Simple Syrup",
+                "type": "Sweetener",
+                "amount": "0.25",
+                "unit": "ounce"
+            },
+            {
+                "name": "Brandied Cherry",
+                "type": "Garnish"
+            } 
+        ],
+        "directions": "Shake all the ingredients with ice, then strain into a coupe. Garnish with the cherry."
+    },
+    {
+        "name": "Bamboo",
+        "base": "Modifiers",
+        "mix_method": "Stirred",
+        "glassware": "Rocks glass",
+        "ingredients": [
+            {
+                "name": "Dolin Blanc Vermouth",
+                "type": "Modifier",
+                "category": "Vermouth",
+                "amount": "1.5",
+                "unit": "ounce"
+            },
+            {
+                "name": "Barbadillo Principe Amontillado Sherry",
+                "type": "Modifier",
+                "category": "Sherry",
+                "amount": "1.5",
+                "unit": "ounce"
+            },
+            {
+                "name": "Cane Sugar Syrup",
+                "type": "Sweetener",
+                "amount": "0.5",
+                "unit": "teaspoon"
+            },
+            {
+                "name": "House Orange Bitters",
+                "type": "Bitters",
+                "amount": "1",
+                "unit": "dash"
+            },
+            {
+                "name": "Angostura Bitters",
+                "type": "Bitters",
+                "amount": "1",
+                "unit": "dash"
+            },
+            {
+                "name": "Lemon Twist",
+                "type": "Garnish"
+            } 
+        ],
+        "directions": "Stir all the ingredients over ice, then strain into a rocks glass. Garnish with the lemon twist."
+    },
+    {
+        "name": "Bee's Knees",
+        "base": "Gin",
+        "mix_method": "Shaken",
+        "glassware": "Coupe",
+        "ingredients": [
+            {
+                "name": "Tanqueray London Dry Gin",
+                "type": "Base spirit",
+                "category": "Gin",
+                "style": "London dry",
+                "amount": "2",
+                "unit": "ounce"
+            },
+            {
+                "name": "Lemon juice",
+                "type": "Fresh juice",
+                "category": "",
+                "amount": "0.75",
+                "unit": "ounce"
+            },
+            {
+                "name": "Acacia Honey Syrup",
+                "type": "Sweetener",
+                "amount": "0.75",
+                "unit": "ounce"
+            },
+            {
+                "name": "Scrappy's Lavender Bitters",
+                "type": "Bitters",
+                "amount": "3",
+                "unit": "drops"
+            },
+            {
+                "name": "Brandied Cherry",
+                "type": "Garnish"
+            }
+        ],
+        "directions": "Shake all the ingredients with ice, then strain into a coupe. Garnish with the cherry."
+    },
+    {
+        "name": "Blood and Sand",
+        "base": "Scotch",
+        "mix_method": "Shaken",
+        "glassware": "Coupe",
+        "ingredients": [
+            {
+                "name": "Springbank 10-Year Scotch",
+                "type": "Base spirit",
+                "category": "Whiskey",
+                "amount": "1",
+                "unit": "ounce"
+            },
+            {
+                "name": "Cherry Heering",
+                "type": "Modifier",
+                "category": "Liqueur",
+                "amount": "0.5",
+                "unit": "ounce"
+            },
+            {
+                "name": "House Sweet Vermouth",
+                "type": "Modifier",
+                "category": "Vermouth",
+                "amount": "0.5",
+                "unit": "ounce"
+            },
+            {
+                "name": "Orange juice",
+                "type": "Fresh juice",
+                "amount": "0.75",
+                "unit": "ounce"
+            },
+            {
+                "name": "Lemon juice",
+                "type": "Fresh juice",
+                "amount": "0.5",
+                "unit": "teaspoon"
+            },
+            {
+                "name": "Brandied Cherry",
+                "type": "Garnish"
+            }
+        ],
+        "directions": "Shake all the ingredients with ice, then strain into a coupe. Garnish with the cherry."
+    }
+]

@@ -75,3 +75,11 @@ Achieving best results with a NoSQL database such as DynamoDB requires a shift i
 
  ### Inverted index pattern
  In DynamoDB, an inverted index is a secondary index that is the inverse of your primary key. The RANGE key becomes your HASH key and vice versa. This pattern flips your table and allows you to query on the other side of your many-to-many relationships.
+
+## 3. Recipes Practice
+**Primary Key Design**
+Entity Hash | HASH | RANGE
+--- | --- | ---
+Ingredient | INGREDIENT#<INGREDIENT_ID> | #METADATA#<INGREDIENT_ID>
+Recipe | RECIPE#<RECIPE_ID> | #METADATA#<RECIPE_ID>
+RecipeIngredientMapping | RECIPE#<RECIPE_ID> | INGREDIENT#<INGREDIENT_ID>
