@@ -40,7 +40,8 @@ Achieving best results with a NoSQL database such as DynamoDB requires a shift i
     - Before designing your DynamoDB table, document every need you have for reading and writing data in your application. Be thorough and think about all the flows in your application because you are going to optimize your table for your access patterns.
 
 2. Optimize for the number of requests to DynamoDB
-    - After you have documented your application’s access pattern needs, you are ready to design your table. You should design your table to minimize the number of requests to DynamoDB for each access pattern. Ideally, each access pattern should require only a single request to DynamoDB because network requests are slow, and this limits the number of network requests you will make in your application.
+    - After you have documented your application’s access pattern needs, you are ready to design your table. You should design your table to minimize the number of requests to DynamoDB for each access pattern. 
+    - Ideally, each access pattern should require only a single request to DynamoDB because network requests are slow, and this limits the number of network requests you will make in your application.
 
 3. Don’t fake a relational model
     - People new to DynamoDB often try to implement a relational model on top of nonrelational DynamoDB. If you try to do this, you will lose most of the benefits of DynamoDB.
@@ -77,9 +78,55 @@ Achieving best results with a NoSQL database such as DynamoDB requires a shift i
  In DynamoDB, an inverted index is a secondary index that is the inverse of your primary key. The RANGE key becomes your HASH key and vice versa. This pattern flips your table and allows you to query on the other side of your many-to-many relationships.
 
 ## 3. Recipes Practice
-**Primary Key Design**
+- In our application, we have the following entities:
+    1. Ingredient
+    2. Recipe
+    3. RecipeIngredientMapping
+
+An ingredient can be in multiple recipes. A recipe contains multiple ingredients. There is a many-to-many relationship between Ingredients and Recipes. We represent this relationship with the RecipeIngredientMapping.
+
+### Ingredient access patterns
+- Create an ingredient
+- Update an ingredient
+- Get an ingredient
+
+### Recipe access patterns
+- Create a recipe
+- Add ingredient to recipe
+- Update ingredient in recipe
+- Remove ingredient from recipe
+- Find recipes by glassware
+- Find recipes by mix method
+- Find recipes by base spirit
+- Get recipe
+- Get ingredients in recipe
+- Find recipes by ingredient
+
+### Design the primary key
 Entity Hash | HASH | RANGE
 --- | --- | ---
 Ingredient | INGREDIENT#<INGREDIENT_ID> | #METADATA#<INGREDIENT_ID>
 Recipe | RECIPE#<RECIPE_ID> | #METADATA#<RECIPE_ID>
 RecipeIngredientMapping | RECIPE#<RECIPE_ID> | INGREDIENT#<INGREDIENT_ID>
+
+Ensure that all your data was loaded into the table by running a Scan operation and getting the count.
+```
+aws dynamodb scan \
+ --table-name <TABLE_NAME> \
+ --select COUNT
+```
+
+### Retrieve multiple entity types in a single request
+You should optimize DynamoDB tables for the number of requests it receives. We also mentioned that DynamoDB does not have joins that a relational database has. Instead, you design your table to allow for join-like behavior in your requests.
+
+Sort keys of the string type are sorted by ASCII character codes. The dollar sign ($) comes directly after the pound sign (#) in ASCII, so this ensures that we will get all mappings in the RecipeIngredientMapping entity.
+
+In a relational database, you use joins to retrieve multiple entity types from different tables in a single request. With DynamoDB, you specifically model your data, so that entities you should access together are located next to each other in a single table. This approach replaces the need for joins in a typical relational database and keeps your application high-performing as you scale up.
+
+### Model a sparse secondary index
+- The primary key for a global secondary index does not have to be unique for each item. DynamoDB then copies items into the index based on the attributes specified, and you can query it just like you do the table.
+-  With secondary indexes, DynamoDB copies items from the original table only if they have the elements of the primary key in the secondary index. 
+- Items that don’t have the primary key elements are not copied, which is why these secondary indexes are called “sparse.”
+
+### Inverted index pattern
+In DynamoDB, an inverted index is a secondary index that is the inverse of your primary key. The RANGE key becomes your HASH key and vice versa. This pattern flips your table and allows you to query on the other side of your many-to-many relationships.
