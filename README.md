@@ -130,3 +130,80 @@ In a relational database, you use joins to retrieve multiple entity types from d
 
 ### Inverted index pattern
 In DynamoDB, an inverted index is a secondary index that is the inverse of your primary key. The RANGE key becomes your HASH key and vice versa. This pattern flips your table and allows you to query on the other side of your many-to-many relationships.
+
+## 2. [Design a database for a mobile app with Amazon DynamoDB](https://aws.amazon.com/getting-started/hands-on/design-a-database-for-a-mobile-app-with-dynamodb/2/)
+
+### Designing the primary key
+You want a RANGE value with different values across different User entities to enable even partitioning if you use this column as a HASH key for an index. For that reason, you append the username to the RANGE key.
+
+Whenever you need something ordered by a particular property, you will need to include that property in your RANGE key to allow for sorting.
+
+### Bulk-load data into the table
+Resource objects provide an easier interface for using the AWS APIs. The Resource object is useful in this situation because it batches our requests
+
+### Retrieve multiple entity types in a single request
+First make a Query request to DynamoDB. The Query specifies a HASH key of USER#<Username> to isolate the returned items to a particular user.
+
+Then, the Query specifies a RANGE key condition expression that is between #METADATA#<Username> and PHOTO$. This Query will return a User entity, as its sort key is #METADATA#<Username>, as well as all of the Photo entities for this user, whose sort keys start with PHOTO#.
+
+Sort keys of the String type are sorted by ASCII character codes.
+
+With DynamoDB, you specifically model your data, so that entities you should access together are located next to each other in a single table. This approach replaces the need for joins in a typical relational database and keeps your application high-performing as you scale up.
+
+### Inverted indexes
+Secondary indexes are crucial data modeling tools in DynamoDB. They allow you to reshape your data to allow for alternate query patterns.
+
+An inverted index is a common secondary index design pattern with DynamoDB. With an inverted index, you create a secondary index that is the inverse of the primary key for your table. The HASH key for your table becomes the RANGE key in your index, and the RANGE key for your table becomes the primary key for your index.
+
+An inverted index is helpful in two scenarios.
+    - First, an inverted index is useful to query the “other” side of a many-to-many relationship
+    - An inverted index is also useful to query a one-to-many relationship for an entity that is itself the subject of a one-to-many relationship
+
+### Creating a secondary index
+To create a secondary index, you specify the primary key of the index, just like when you were creating a table. Note that the primary key for a global secondary index does not have to be unique. DynamoDB then copies your items into the index based on the attributes specified, and you can query it just like your table.
+
+An inverted index is a common pattern in DynamoDB where you create a secondary index that is the inverse of your table’s primary key. The HASH key for your table is specified as the RANGE key in your secondary index, and the RANGE key for your table is specified as the HASH key in your secondary index.
+
+Note that an inverted index is a name of a design pattern rather than an official property in DynamoDB. Creating an inverted index is just like creating any other secondary index.
+
+### Query the inverted index
+To use a secondary index, you only have two API calls available -- Query and Scan.
+
+With Query, you must specify the HASH key, and it returns a targeted result. 
+
+With Scan, you don’t specify a HASH key, and the operation runs across your entire table. Scans are discouraged in DynamoDB except in specific circumstances because they access every item in your database. If you have a significant amount of data in your table, scanning can take a very long time
+
+### Partrial normalization
+Partial normalization and the BatchGetItem API call can be helpful to maintain data integrity across objects while still keeping query requests low.
+
+With DynamoDB, you often want to denormalize your data. Denormalization helps to avoid joins and improve query performance. To do this, you may copy attributes from one item into another item that refers to it in order to avoid fetching both items during a query.
+
+Rather than storing the full information about each user in the Friendship entity, you can use the BatchGetItem API to retrieve information about a user in a Friendship entity.
+
+The function first makes a Query request using the inverted index to find all of the users that the given username is following. It then assembles a BatchGetItem to fetch the full User entity for each of the followed users and returns those entities.
+
+This results in two requests to DynamoDB, rather than the ideal of one. However, it’s satisfying a fairly complex access pattern, and it avoids the need to constantly update Friendship entities every time a user profile is updated. This partial normalization can be a great tool for your modeling needs.
+
+### DynamoDB Transactions
+Transactions are popular in relational systems for operations that affect multiple data elements at once
+
+The addition of transactions to DynamoDB makes it easier to build applications where you need to alter multiple items as part of a single operation. With DynamoDB transactions, you can operate on up to 10 items as part of a transaction request.
+
+We’re using the transact_write_items() method to perform a write transaction. Our transaction has two operations.
+
+First, we’re doing a Put operation to insert a new Reaction entity. As part of that operation, we’re specifying a condition that the SK attribute should not exist for this item. This is a way to ensure that an item with this PK and SK doesn’t already exist. If it did, that would mean the user has already added this reaction to this photo.
+
+The second operation is an Update operation on the User entity to increment the reaction type in the reactions attribute map.
+
+ DynamoDB’s powerful update expressions allow you to perform atomic increments without needing to first retrieve the item and then update it.
+
+The addition of DynamoDB transactions greatly simplifies the workflow around complex operations like these. Previously, this would have required multiple API calls with complex conditions and manual rollbacks in the event of conflicts. Now it can be implemented with less than 50 lines of code.
+
+### DynamoDB Strategies Summary
+The strategies we used to satisfy these patterns included:
+
+1. A single-table design that combined multiple entity types in one table.
+2. A composite primary key that allow for many-to-many relationships.
+3. An inverted index to allow reverse lookups on our many-to-many entity.
+4. Partial normalization to keep our data fresh while remaining performant.
+5. DynamoDB transactions to handle complex write patterns across multiple items.
