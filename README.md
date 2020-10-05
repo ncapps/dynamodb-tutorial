@@ -131,7 +131,7 @@ In a relational database, you use joins to retrieve multiple entity types from d
 ### Inverted index pattern
 In DynamoDB, an inverted index is a secondary index that is the inverse of your primary key. The RANGE key becomes your HASH key and vice versa. This pattern flips your table and allows you to query on the other side of your many-to-many relationships.
 
-## 2. [Design a database for a mobile app with Amazon DynamoDB](https://aws.amazon.com/getting-started/hands-on/design-a-database-for-a-mobile-app-with-dynamodb/2/)
+## 4. [Design a database for a mobile app with Amazon DynamoDB](https://aws.amazon.com/getting-started/hands-on/design-a-database-for-a-mobile-app-with-dynamodb/2/)
 
 ### Designing the primary key
 You want a RANGE value with different values across different User entities to enable even partitioning if you use this column as a HASH key for an index. For that reason, you append the username to the RANGE key.
@@ -207,3 +207,12 @@ The strategies we used to satisfy these patterns included:
 3. An inverted index to allow reverse lookups on our many-to-many entity.
 4. Partial normalization to keep our data fresh while remaining performant.
 5. DynamoDB transactions to handle complex write patterns across multiple items.
+
+## 5. [Best Practices for Designing and Architecting with DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/best-practices.html)
+### Two Key Concepts for NoSQL Design
+1. You shouldn't start designing your schema for DynamoDB until you know the questions it will need to answer. Understanding the business problems and the application use cases up front is essential.
+
+2. You should maintain as few tables as possible in a DynamoDB application.
+
+### Secondary indexes
+Keep the number of indexes to a minimum. Don't create secondary indexes on attributes that you don't query often. Indexes that are seldom used contribute to increased storage and I/O costs without improving application performance.
