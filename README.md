@@ -80,8 +80,12 @@ Achieving best results with a NoSQL database such as DynamoDB requires a shift i
 ## 3. Recipes Practice
 - In our application, we have the following entities:
     1. Ingredient
-    2. Recipe
-    3. RecipeIngredientMapping
+    2. Base spirit
+    3. Mix method
+    4. Glassware
+    5. Recipe
+    6. RecipeIngredientMapping
+    7. User
 
 An ingredient can be in multiple recipes. A recipe contains multiple ingredients. There is a many-to-many relationship between Ingredients and Recipes. We represent this relationship with the RecipeIngredientMapping.
 
@@ -95,12 +99,21 @@ An ingredient can be in multiple recipes. A recipe contains multiple ingredients
 - Add ingredient to recipe
 - Update ingredient in recipe
 - Remove ingredient from recipe
-- Find recipes by glassware
-- Find recipes by mix method
 - Find recipes by base spirit
+- Find recipes by mix method
+- Find recipes by glassware
 - Get recipe
 - Get ingredients in recipe
 - Find recipes by ingredient
+- React to a recipe
+- View recipe and reactions
+
+
+## User access patterns
+- Create user profile
+- Update user profile
+- Get user profile
+- Get user's favorite recipes
 
 ### Design the primary key
 Entity Hash | HASH | RANGE
@@ -108,6 +121,8 @@ Entity Hash | HASH | RANGE
 Ingredient | INGREDIENT#<INGREDIENT_ID> | #METADATA#<INGREDIENT_ID>
 Recipe | RECIPE#<RECIPE_ID> | #METADATA#<RECIPE_ID>
 RecipeIngredientMapping | RECIPE#<RECIPE_ID> | INGREDIENT#<INGREDIENT_ID>
+User | USER#<USERNAME> | #METADATA#<USERNAME>
+Reaction | REACTION#<USERNAME>#<TYPE> | RECIPE#<RECIPE_ID>
 
 Ensure that all your data was loaded into the table by running a Scan operation and getting the count.
 ```

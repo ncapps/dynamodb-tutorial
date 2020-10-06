@@ -12,15 +12,30 @@ example:
 {"PK": "RECIPE#53a098c4-b85a-4c50-8f78-39e4ee86338f", "SK": "INGREDIENT#e819427f-88fc-494e-a3fe-78c0d2d86678", "amount": "1.5", "unit": "ounce"}
 {"name": "Beefeater London Dry Gin", "type": "Base spirit", "category": "Gin", "style": "London dry", "PK": "INGREDIENT#e819427f-88fc-494e-a3fe-78c0d2d86678", "SK": "#METADATA#e819427f-88fc-494e-a3fe-78c0d2d86678"}
 '''
-
+import re
 import json
 from uuid import uuid4
+
+
+def format_item(item):
+    return re.sub('[^A-Z0-9]', '', item.upper())
+
+
+def get_recipe_id(name, base, mix_method, glassware):
+    # string upper
+    # replace anything not ascii_uppercase with ""
+    # delimit with #
+    items = map(format_item, [name, base, mix_method, glassware])
+    return '#'.join(items)
 
 
 def format_recipe(recipe):
     recipe_item = recipe.copy()
     recipe_item.pop('ingredients', False)
-    recipe_id = uuid4()
+    recipe_id = get_recipe_id(recipe['name'],
+                              recipe['base'],
+                              recipe['mix_method'],
+                              recipe['glassware'])
     recipe_item['PK'] = f'RECIPE#{recipe_id}'
     recipe_item['SK'] = f'#METADATA#{recipe_id}'
     return recipe_item
@@ -39,7 +54,6 @@ def format_ingredient(ingredient):
 with open('scripts/recipes.json', 'rt') as in_fh, open('scripts/items.json', 'wt') as out_fh:
     recipes = json.load(in_fh)
     unique_ingredients = {}
-    
 
     for recipe in recipes:
         recipe_item = format_recipe(recipe)
@@ -58,7 +72,18 @@ with open('scripts/recipes.json', 'rt') as in_fh, open('scripts/items.json', 'wt
                 'unit': ingredient.get('unit', None)
             }
             out_fh.write(f'{json.dumps(recipe_ingredient_map)}\n')
-        
-            
+
     for ingredient_item in unique_ingredients.values():
         out_fh.write(f'{json.dumps(ingredient_item)}\n')
+    
+    user_record = {}
+    username = 'JONDOE@GMAIL.COM'
+    user_record['PK'] = f'USER#{username}'
+    user_record['SK'] = f'#METADATA#{username}'
+    user_record['name'] = 'Jon Doe'
+    out_fh.write(f'{json.dumps(user_record)}\n')
+
+    reaction_record = {}
+    reaction_record['PK'] = f'REACTION#{username}#LIKE'
+    reaction_record['SK'] = recipe_item['PK']
+    out_fh.write(f'{json.dumps(reaction_record)}\n')
